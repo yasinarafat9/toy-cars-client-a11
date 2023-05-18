@@ -1,11 +1,38 @@
 import './Register.css'
 import { Link } from 'react-router-dom';
 import { FaGoogle, FaTwitter } from "react-icons/fa";
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
+
 const Register = () => {
+
+    const {createUser} = useContext(AuthContext);
+
+    const handleRegister = event =>{
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, email, password)
+
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => console.log(error))
+
+
+    }
+
+
+
+
     return (
         <div className="mx-auto">
             <div className="mx-auto form-box">
-                <form className="">
+                <form onSubmit={handleRegister}>
                     <div>
                         <h5>Your Name:</h5>
                         <input type="text" name="name" placeholder="Enter your Name" />
@@ -22,6 +49,7 @@ const Register = () => {
                         <br />
                         <button className='btn-web my-4 mx-auto'>Register</button>
                     </div>
+                </form>
                     <div>
                         <div className='text-center my-3'>
                             <p className='my-2'>Or login Using..
@@ -33,7 +61,6 @@ const Register = () => {
                         </div>
 
                     </div>
-                </form>
             </div>
         </div>
     );

@@ -1,0 +1,46 @@
+
+
+.nav-bg{
+    background-color: wheat;
+    width: 1200px;
+    height: 90px;
+    padding: 10px;
+}
+.nav-img-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-dives{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.nav-dives img{
+    width: 140px;
+}
+.nav-dives h4{
+    padding: 10px;
+}
+.nav-words{
+    margin: 10px 20px;
+    color: rgb(43, 42, 42);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-web{
+    padding: 8px 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(248, 99, 30);
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    
+}
+.btn-web:hover{
+    background-color: rgb(241, 82, 7);
+}

@@ -1,11 +1,11 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css'
 import toyCarsLogo  from '../../../assets/toy cars logo.png'
 
 const Footer = () => {
     return (
-        <div className='footer-bg'>
+
+        <footer className='footer-bg'>
             <div className='footer-divs'>
                 <div className='img-p'>
                     <img src={toyCarsLogo} alt="" />
@@ -33,7 +33,7 @@ const Footer = () => {
                     
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 

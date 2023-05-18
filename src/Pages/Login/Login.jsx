@@ -6,7 +6,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
 
-    const { logIn } = useContext(AuthContext);
+    const { logIn, googleLogin } = useContext(AuthContext);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -22,6 +22,16 @@ const Login = () => {
             })
             .catch(error => console.log(error));
     }
+
+    const handleGoogleLogin =() =>{
+        googleLogin()
+        .then(result =>{
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error => console.log(error))
+    }
+
 
     return (
         <div className="mx-auto">
@@ -42,7 +52,7 @@ const Login = () => {
                 <div>
                     <div className='text-center my-3'>
                         <p className='my-2'>Or login Using..</p>
-                        <FaGoogle className='text-danger fs-2 m-2' />
+                        <FaGoogle className='text-danger fs-2 m-2' onClick={handleGoogleLogin} />
                         <FaTwitter className='text-primary fs-2 m-2' />
                         <p>New to this website? <Link to='/register'>Please Register</Link></p>
 

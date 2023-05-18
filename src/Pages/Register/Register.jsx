@@ -6,7 +6,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, googleLogin} = useContext(AuthContext);
 
     const handleRegister = event =>{
         event.preventDefault();
@@ -22,10 +22,16 @@ const Register = () => {
             console.log(user);
         })
         .catch(error => console.log(error))
-
-
     }
 
+    const handleGoogleLogin =() =>{
+        googleLogin()
+        .then(result =>{
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error => console.log(error))
+    }
 
 
 
@@ -53,7 +59,7 @@ const Register = () => {
                     <div>
                         <div className='text-center my-3'>
                             <p className='my-2'>Or login Using..
-                            <FaGoogle className='text-danger fs-2 m-2' />
+                            <FaGoogle className='text-danger fs-2 m-2' onClick={handleGoogleLogin} />
                             <FaTwitter className='text-primary fs-2 m-2' />
                             </p>
                             

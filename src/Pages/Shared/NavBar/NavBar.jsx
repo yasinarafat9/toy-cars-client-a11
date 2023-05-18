@@ -19,7 +19,7 @@ const NavBar = () => {
                 </div>
                 <div>
                 <img src="" alt="" />
-                <button className='btn-web'>Login</button>
+                <Link to='/login'><button className='btn-web'>Login</button></Link>
                 </div>
             </div>
         </nav>

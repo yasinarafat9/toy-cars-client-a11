@@ -15,7 +15,7 @@ const NavBar = () => {
                     <Link className='nav-words' to='' >All Toys</Link>
                     <Link className='nav-words' to='' >My Toys</Link>
                     <Link className='nav-words' to='' >Add a Toy</Link>
-                    <Link className='nav-words' to='' >Blogs</Link>
+                    <Link className='nav-words' to='/blogs' >Blogs</Link>
                 </div>
                 <div>
                 <img src="" alt="" />

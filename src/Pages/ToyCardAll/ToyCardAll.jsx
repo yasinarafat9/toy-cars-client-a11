@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './ToyCardAll.css'
 import { FaStar } from "react-icons/fa";
 
@@ -20,7 +21,7 @@ const ToyCardAll = ({ toy }) => {
                             <FaStar className='gold' /></p>
 
                     </div>
-                    <button className='btn-web'>View Details</button>
+                    <Link to={`/viewDetails/${_id}`}><button className='btn-web'>View Details</button></Link>
                 </div>
             </div>
         </div>

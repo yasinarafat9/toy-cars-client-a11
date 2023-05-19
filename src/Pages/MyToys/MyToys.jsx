@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import './MyToys.css'
 import { AuthContext } from '../../Providers/AuthProvider';
+import CardMyToys from '../CardMyToys/CardMyToys';
 
 const MyToys = () => {
     const {user} = useContext(AuthContext);
@@ -16,7 +17,12 @@ const MyToys = () => {
 
     return (
         <div>
-            <h2>toys count : {toys.length}</h2>
+            {
+                toys.map(toy => <CardMyToys
+                key={toy._id}
+                toy={toy}
+                ></CardMyToys>)
+            }
         </div>
     );
 };

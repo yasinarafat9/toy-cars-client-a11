@@ -24,7 +24,7 @@ const NavBar = () => {
                 <div className='d-flex justify-content-between'>
                     <Link className='nav-words' to='' >Home</Link>
                     <Link className='nav-words' to='/allToys' >All Toys</Link>
-                    <Link className='nav-words' to='' >My Toys</Link>
+                    <Link className='nav-words' to='/myToys' >My Toys</Link>
                     <Link className='nav-words' to='/addAToy' >Add a Toy</Link>
                     <Link className='nav-words' to='/blogs' >Blogs</Link>
                 </div>

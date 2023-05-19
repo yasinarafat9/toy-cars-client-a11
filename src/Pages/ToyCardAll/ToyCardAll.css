@@ -1,8 +1,9 @@
 .toy-card {
     padding: 30px;
     border: none;
-    box-shadow: 0px 5px 10px rgba(75, 74, 74, 0.945);
     width: 390px;
+    /* box-shadow: 0px 5px 10px rgba(75, 74, 74, 0.945); */
+    box-shadow: 0px 5px 10px rgba(165, 162, 162, 0.945);
     border-radius: 5px;
 }
 
@@ -18,4 +19,8 @@
 }
 .toy-card-texts{
     height: 180px;
+}
+.gold{
+    color: rgb(241, 184, 39);
+    font-size: 25px;
 }

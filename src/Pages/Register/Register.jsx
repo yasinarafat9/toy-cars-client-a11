@@ -38,7 +38,7 @@ const Register = () => {
     return (
         <div className="mx-auto">
             <div className="mx-auto form-box">
-                <form onSubmit={handleRegister}>
+                <form onSubmit={handleRegister} >
                     <div>
                         <h5>Your Name:</h5>
                         <input type="text" name="name" placeholder="Enter your Name" />
@@ -53,6 +53,8 @@ const Register = () => {
                         <h5>Password:</h5>
                         <input type="password" name="password" placeholder="Enter Password" />
                         <br />
+                    </div>
+                    <div className='text-center'>
                         <button className='btn-web my-4 mx-auto'>Register</button>
                     </div>
                 </form>

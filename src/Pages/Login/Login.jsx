@@ -36,7 +36,7 @@ const Login = () => {
     return (
         <div className="mx-auto">
             <div className="mx-auto form-box">
-                <form onSubmit={handleLogin}>
+                <form onSubmit={handleLogin} >
                     <div className=''>
                         <h5>Email:</h5>
                         <input type="text" name="email" placeholder="Enter your Email" />
@@ -46,6 +46,9 @@ const Login = () => {
                         <h5>Password:</h5>
                         <input type="password" name="password" placeholder="Enter Password" />
                         <br />
+                    </div>
+                    <div className='text-center'>
+
                         <button className='btn-web my-4 mx-auto'>Login</button>
                     </div>
                 </form>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './CardMyToys.css'
 import { FaStar } from "react-icons/fa";
 
@@ -27,7 +28,7 @@ const CardMyToys = ({ toy, handleDelete }) => {
                 </div>
                 <div className='btn-container'>
                     <button onClick={() => handleDelete(_id)} className='btn-delete'>Delete</button>
-                    <button className='btn-update'>Update</button>
+                    <Link to='/updateToy'><button className='btn-update'>Update</button></Link>
                 </div>
             </div>
         </div>

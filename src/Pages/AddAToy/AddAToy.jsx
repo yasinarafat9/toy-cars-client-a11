@@ -33,17 +33,6 @@ const AddAToy = () => {
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
     return (
         <div>
             <div className='add-toy-container'>

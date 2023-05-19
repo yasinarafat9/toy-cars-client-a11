@@ -10,15 +10,18 @@
 .toy-card-dives {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 }
 
 .toy-card-dives img {
     width: 300px;
     height: 300px;
     object-fit: cover;
+    padding-bottom: 10px;
 }
-.toy-card-texts{
-    height: 180px;
+.toy-card-texts p{
+    /* height: 180px; */
+    margin: 5px auto;
 }
 .gold{
     color: rgb(241, 184, 39);

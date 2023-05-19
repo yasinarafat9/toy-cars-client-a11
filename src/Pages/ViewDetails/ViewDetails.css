@@ -1,0 +1,17 @@
+.view-details-container{
+    padding: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(75, 74, 74, 0.945);
+    /* box-shadow: 0px 5px 10px rgba(165, 162, 162, 0.945); */
+    border-radius: 5px;
+    text-align: justify;
+}
+
+.sub-details{
+    display: flex;
+    justify-content: space-between;
+}
+.sub-details span{
+    color: rgb(13, 3, 105);
+    text-decoration: underline;
+}

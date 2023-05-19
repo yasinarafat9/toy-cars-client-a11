@@ -12,13 +12,16 @@ const ToyCardAll = ({ toy }) => {
                     <img src={toyImgUrl} alt="" />
                     <div className='toy-card-texts'>
                         <h6>{toyName}</h6>
-                        <h5 className='text-success'>{price}</h5>
+                        <p>Seller Name: {name}</p>
+                        <p>Sub-category: {subcategory}</p>
+                        <p>Available Quantity: {quantity}</p>
+                        <h5 className='text-success'>Price: {price}</h5>
                         <p>Total Ratings: {rating} <FaStar className='gold' />
                             <FaStar className='gold' />
                             <FaStar className='gold' />
                             <FaStar className='gold' />
-
-                            <FaStar className='gold' /></p>
+                            <FaStar className='gold' />
+                        </p>
 
                     </div>
                     <Link to={`/viewDetails/${_id}`}><button className='btn-web'>View Details</button></Link>

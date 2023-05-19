@@ -9,7 +9,6 @@ import img5 from '../../../assets/Images/img (5).jpg'
 const Banner = () => {
     return (
         <div className='banner mx-auto'>
-            <h2>Banner </h2>
             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img

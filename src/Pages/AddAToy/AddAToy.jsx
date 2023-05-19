@@ -15,8 +15,22 @@ const AddAToy = () => {
         const toyImgUrl = form.toyImgUrl.value;
         const description = form.description.value;
 
-        const addToy = { name, email, toyName, price, subcategory, rating, quantity, toyImgUrl, description }
-        console.log(addToy)
+        const newAddToy = { name, email, toyName, price, subcategory, rating, quantity, toyImgUrl, description }
+        // console.log(addToy)
+
+        // send data to server
+        fetch('http://localhost:5000/addToy', {
+            method: 'POST',
+            headers: {
+                'content-type':'application/json',
+            },
+            body: JSON.stringify(newAddToy)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+
     }
 
 

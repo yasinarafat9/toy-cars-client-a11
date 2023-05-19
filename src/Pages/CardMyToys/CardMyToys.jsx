@@ -1,14 +1,16 @@
 import './CardMyToys.css'
 import { FaStar } from "react-icons/fa";
 
-const CardMyToys = ({ toy }) => {
+const CardMyToys = ({ toy, handleDelete }) => {
     const { _id, name, email, toyName, price, subcategory, rating, quantity, toyImgUrl, description } = toy;
+
+    
 
     return (
         <div>
             <div className='my-toy-dives'>
                 <div>
-                    <img src={toyImgUrl} alt="" />
+                    { toyImgUrl && <img src={toyImgUrl} alt="" />}
                 </div>
                 <div>
                     <h5>{toyName}</h5>
@@ -24,7 +26,7 @@ const CardMyToys = ({ toy }) => {
                     <h6>Available quantity: {quantity}</h6>
                 </div>
                 <div className='btn-container'>
-                    <button className='btn-delete'>Delete</button>
+                    <button onClick={() => handleDelete(_id)} className='btn-delete'>Delete</button>
                     <button className='btn-update'>Update</button>
                 </div>
             </div>

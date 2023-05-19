@@ -9,7 +9,7 @@ const ViewDetails = () => {
         <div className='my-4'>
             <div className='view-details-container'>
                 <div className='d-flex'>
-                    <img src={toyImgUrl} alt="" />
+                    <img className='px-5' src={toyImgUrl} alt="" />
                     <div>
                         <h4>{toyName}</h4>
                         <p>{description}</p>

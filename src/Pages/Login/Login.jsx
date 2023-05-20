@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css'
 import { FaGoogle, FaTwitter } from "react-icons/fa";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
@@ -12,20 +12,28 @@ const Login = () => {
 
     const from = location.state?.from?.pathname || '/';
 
+    const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
-
+        // console.log(email, password)
+        setError('')
+        setSuccess('')
         logIn(email, password)
             .then(result => {
                 const user = result.user;
+                setSuccess(result.message)
                 console.log(user);
                 navigate(from, { replace: true })
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error.message)
+                setError(error.message)
+            });
     }
 
     const handleGoogleLogin = () => {
@@ -45,16 +53,23 @@ const Login = () => {
                 <form onSubmit={handleLogin} >
                     <div className=''>
                         <h5>Email:</h5>
-                        <input type="text" name="email" placeholder="Enter your Email" />
+                        <input type="text" name="email" placeholder="Enter your Email" required />
                     </div>
                     <br />
                     <div>
                         <h5>Password:</h5>
-                        <input type="password" name="password" placeholder="Enter Password" />
+                        <input type="password" name="password" placeholder="Enter Password" required />
                         <br />
                     </div>
                     <div className='text-center'>
-
+                        {
+                            <>
+                                <div className='p-width'>
+                                    <p className='text-danger pt-2'>{error}</p>
+                                    <p className='text-success pt-2'>{success}</p>
+                                </div>
+                            </>
+                        }
                         <button className='btn-web my-4 mx-auto'>Login</button>
                     </div>
                 </form>

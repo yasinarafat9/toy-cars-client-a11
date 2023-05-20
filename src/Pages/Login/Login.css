@@ -14,3 +14,12 @@ input{
     border: none;
     box-shadow: 0px 2px 5px rgba(75, 74, 74, 0.678);
 }
+.p-width{
+    width: 300px;
+    text-align: center;
+}
+.p-width p{
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+}

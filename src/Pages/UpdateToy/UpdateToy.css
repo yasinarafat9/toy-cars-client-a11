@@ -1,8 +1,18 @@
-.form-update{
-    text-align: center;
+.toy-img-div{
+    width: 900px ;
+    height: 250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.toy-img-div img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 40px;
 }
 .update{
     text-align: center;
-    margin: 50px auto;
+    margin: 40px auto;
     width: 200px;
 }

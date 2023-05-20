@@ -1,6 +1,10 @@
+import { useLoaderData } from 'react-router-dom';
 import './UpdateToy.css'
 
 const UpdateToy = () => {
+
+    const toy = useLoaderData();
+    const { _id, name, email, toyName, price, subcategory, rating, quantity, toyImgUrl, description } = toy;
 
     const handleUpdateToy = event => {
         event.preventDefault();
@@ -23,14 +27,25 @@ const UpdateToy = () => {
                 <form onSubmit={handleUpdateToy} className='form-update'>
                     <h3 className='text-center'>Update Your Toy</h3>
                     <br />
+                    <div className='toy-img-div'>
+                        <img src={toyImgUrl} alt="" />
+                        <div>
+                            <h6>Current Name: {toyName}</h6>
+                            <h6>Current Price: {price}</h6>
+                            <h6>Current Quantity: {quantity}</h6>
+                            {/* <small>Toy Description: {description}</small> */}
+
+                        </div>
+                    </div>
+                    <br />
                     <div className='add-toy-dives'>
                         <div>
-                            <h5>Toy Name:</h5>
-                            <input type="text" name='toyName' placeholder='Write the Toy Name' />
+                            <h5>Update Toy Name:</h5>
+                            <input type="text" name='toyName' placeholder='Update the Toy Name' />
                         </div>
                         <div>
-                            <h5>Price:</h5>
-                            <input type="text" name='price' placeholder='Enter the $$price' />
+                            <h5><span className='text-primary'>Current Price: {price}</span></h5>
+                            <input type="text" name='price' placeholder='Update the $$price' />
                         </div>
                         <div>
                             <h5>Avaliable Quantity:</h5>
@@ -42,7 +57,10 @@ const UpdateToy = () => {
                         </div>
 
                     </div>
+                    <div className='update'>
                     <button type='submit' className='btn-web update'>Update</button>
+
+                    </div>
 
                 </form>
             </div>

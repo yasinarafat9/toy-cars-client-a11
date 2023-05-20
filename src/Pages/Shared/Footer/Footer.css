@@ -33,3 +33,9 @@
     display: block;
     margin: 10px auto;
 }
+
+.icon-size{
+    font-size: 30px;
+    color: white;
+    margin-right: 15px;
+}

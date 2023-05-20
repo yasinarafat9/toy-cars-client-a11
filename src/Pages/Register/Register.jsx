@@ -1,5 +1,5 @@
 import './Register.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaTwitter } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -7,6 +7,10 @@ import { AuthContext } from '../../Providers/AuthProvider';
 const Register = () => {
 
     const {createUser, googleLogin} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
 
     const handleRegister = event =>{
         event.preventDefault();
@@ -20,6 +24,7 @@ const Register = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            navigate(from, { replace: true })
         })
         .catch(error => console.log(error))
     }
@@ -29,6 +34,7 @@ const Register = () => {
         .then(result =>{
             const user = result.user;
             console.log(user)
+            navigate(from, { replace: true })
         })
         .catch(error => console.log(error))
     }

@@ -1,0 +1,23 @@
+.gallary h1{
+    text-align: center;
+}
+.gallary  p{
+    width: 1000px;
+    margin: auto;
+    text-align:center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.gallary-img-container{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.gallary-img-container img{
+    margin: auto;
+    width: 350px;  
+    height: 400px; 
+    object-fit: cover;
+}

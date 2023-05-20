@@ -51,7 +51,7 @@ const router = createBrowserRouter([
           element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
         },
         {
-          path:'/updateToy',
+          path:'/updateToy/:id',
           element:<PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>
         }
       ]

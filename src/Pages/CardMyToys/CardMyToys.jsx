@@ -28,7 +28,7 @@ const CardMyToys = ({ toy, handleDelete }) => {
                 </div>
                 <div className='btn-container'>
                     <button onClick={() => handleDelete(_id)} className='btn-delete'>Delete</button>
-                    <Link to='/updateToy'><button  className='btn-update'>Update</button></Link>
+                    <Link to={`/updateToy/${_id}`}><button  className='btn-update'>Update</button></Link>
                 </div>
             </div>
         </div>

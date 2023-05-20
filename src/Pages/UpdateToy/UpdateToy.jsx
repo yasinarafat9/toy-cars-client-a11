@@ -45,7 +45,7 @@ const UpdateToy = () => {
 
     return (
         <div>
-            <div className='add-toy-container'>
+            <div className='update-container'>
                 <form onSubmit={handleUpdateToy} className='form-update'>
                     <h3 className='text-center'>Update Your Toy</h3>
                     <br />
@@ -63,19 +63,19 @@ const UpdateToy = () => {
                     <div className='add-toy-dives'>
                         <div>
                             <h5>Update Toy Name:</h5>
-                            <input type="text" name='toyName' placeholder='Update the Toy Name' />
+                            <input type="text" name='toyName' placeholder='Update the Toy Name' defaultValue={toyName}/>
                         </div>
                         <div>
                             <h5><span className='text-primary'>Current Price: {price}</span></h5>
-                            <input type="text" name='price' placeholder='Update the $$price' />
+                            <input type="text" name='price' placeholder='Update the $$price' defaultValue={price} />
                         </div>
                         <div>
                             <h5>Avaliable Quantity:</h5>
-                            <input type="text" name='quantity' placeholder='Avaliable Quantity' />
+                            <input type="text" name='quantity' placeholder='Avaliable Quantity' defaultValue={quantity} />
                         </div>
                         <div>
                             <h5>Detail Description:</h5>
-                            <input type="text" name='description' placeholder='Details Description' className='description-filed' />
+                            <input type="text" name='description' placeholder='Details Description'  defaultValue={description} />
                         </div>
 
                     </div>

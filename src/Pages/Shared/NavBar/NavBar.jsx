@@ -3,6 +3,8 @@ import './NavBar.css'
 import toyCarsLogo from '../../../assets/toy cars logo.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../../Providers/AuthProvider';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -13,6 +15,13 @@ const NavBar = () => {
             .then(() => { })
             .catch(error => console.log(error))
     }
+
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+          {user.displayName}
+        </Tooltip>
+      );
+
 
     return (
         <nav className='nav-bg'>
@@ -27,11 +36,11 @@ const NavBar = () => {
                     <Link className='nav-words' to='/allToys' >All Toys</Link>
                     {
                         user?.email ?
-                        <>
-                        <Link className='nav-words' to='/myToys' >My Toys</Link>
-                        <Link className='nav-words' to='/addAToy' >Add a Toy</Link>
-                        </>
-                        : ''
+                            <>
+                                <Link className='nav-words' to='/myToys' >My Toys</Link>
+                                <Link className='nav-words' to='/addAToy' >Add a Toy</Link>
+                            </>
+                            : ''
                     }
                 </div>
                 <div className='user-nav'>
@@ -40,9 +49,15 @@ const NavBar = () => {
                         user?.email ?
                             <>
                                 <div className='d-flex align-items-center'>
-                                {/* <h6 className='p-2 text-center'>{user.displayName}</h6> */}
-                                <img src={user.photoURL} alt="" />
-                                <button className='btn-web' onClick={handleLogOut}>Log Out</button>
+                                    <OverlayTrigger
+                                        placement="left"
+                                        delay={{ show: 250, hide: 400 }}
+                                        overlay={renderTooltip}
+                                    >
+                                        
+                                    <img src={user.photoURL} alt="" />
+                                    </OverlayTrigger>
+                                    <button className='btn-web' onClick={handleLogOut}>Log Out</button>
                                 </div>
                             </>
                             :

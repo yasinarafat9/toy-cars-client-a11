@@ -1,6 +1,11 @@
+import { useContext } from 'react';
 import './AddAToy.css'
+import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2'
+
 
 const AddAToy = () => {
+    const { user } = useContext(AuthContext);
 
     const handleAddToy = event => {
         event.preventDefault();
@@ -22,13 +27,21 @@ const AddAToy = () => {
         fetch('http://localhost:5000/addToy', {
             method: 'POST',
             headers: {
-                'content-type':'application/json',
+                'content-type': 'application/json',
             },
             body: JSON.stringify(newAddToy)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Your Toy Added Successfully!!',
+                        icon: 'success',
+                        confirmButtonText: 'Awesome!!'
+                    })
+                }
             })
 
     }
@@ -41,11 +54,12 @@ const AddAToy = () => {
                     <div className='add-toy-dives'>
                         <div>
                             <h5>Seller Name:</h5>
-                            <input type="text" name='name' placeholder='Seller Name' />
+                            <input type="text" name='name' placeholder='Seller Name' defaultValue={user?.displayName} />
+
                         </div>
                         <div>
                             <h5>Seller Email: </h5>
-                            <input type="email" name='email' placeholder='Seller Email:' />
+                            <input type="email" name='email' placeholder='Seller Email:' defaultValue={user?.email} />
                         </div>
                         <div>
                             <h5>Toy Name:</h5>

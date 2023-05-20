@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css'
 import toyCarsLogo from '../../../assets/toy cars logo.png'
 import { useContext } from 'react';
@@ -33,14 +33,14 @@ const NavBar = () => {
                     <h4>Super Toy Cars</h4>
                 </div>
                 <div className='d-flex justify-content-between'>
-                    <Link className='nav-words' to='' >Home</Link>
-                    <Link className='nav-words' to='/blogs' >Blogs</Link>
-                    <Link className='nav-words' to='/allToys' >All Toys</Link>
+                    <NavLink className='nav-words' to='/' >Home</NavLink>
+                    <NavLink className='nav-words' to='/blogs' >Blogs</NavLink>
+                    <NavLink className='nav-words' to='/allToys' >All Toys</NavLink>
                     {
                         user?.email ?
                             <>
-                                <Link className='nav-words' to='/myToys' >My Toys</Link>
-                                <Link className='nav-words' to='/addAToy' >Add a Toy</Link>
+                                <NavLink className='nav-words' to='/myToys' >My Toys</NavLink>
+                                <NavLink className='nav-words' to='/addAToy' >Add a Toy</NavLink>
                             </>
                             : ''
                     }

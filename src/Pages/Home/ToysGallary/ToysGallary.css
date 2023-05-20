@@ -8,16 +8,21 @@
     padding-top: 10px;
     padding-bottom: 30px;
 }
-.gallary-img-container{
+/* .gallary-img-container{
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-}
+} */
 
 .gallary-img-container img{
-    margin: auto;
+    /* margin: auto; */
     width: 350px;  
     height: 400px; 
+    margin-bottom: 20px;
+    padding-bottom: 40px;
     object-fit: cover;
+}
+.gallary-img-container img:hover{
+    box-shadow: 0px 5px 10px gray;
 }

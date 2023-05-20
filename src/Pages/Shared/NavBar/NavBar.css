@@ -58,3 +58,7 @@
     margin: 0px 20px;
     box-shadow: 0px 2px 5px rgba(63, 62, 62, 0.678);
 }
+.active{
+    color: rgb(255, 117, 4);
+    /* text-shadow: 0px 5px 5px rgba(62, 225, 253, 0.678); */
+  }

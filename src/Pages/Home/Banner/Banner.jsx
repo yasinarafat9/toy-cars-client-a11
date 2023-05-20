@@ -5,10 +5,11 @@ import img2 from '../../../assets/Images/img (2).jpg'
 import img3 from '../../../assets/Images/img (3).jpg'
 import img4 from '../../../assets/Images/img (4).webp'
 import img5 from '../../../assets/Images/img (5).jpg'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div className='banner mx-auto'>
+        <div className='banner mx-auto my-3'>
             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img
@@ -19,6 +20,7 @@ const Banner = () => {
                     <Carousel.Caption>
                         <h1>Blue Rc Truck Car</h1>
                         <p>USD $ 166 IN STOCK</p>
+                        <Link to='/allToys'><button className='btn-web mb-2 fs-4'>View All Toys</button></Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
@@ -30,6 +32,7 @@ const Banner = () => {
                     <Carousel.Caption>
                         <h1>Top Gears Top 9 Iconic Blue Toy Car</h1>
                         <p>USD 80.99 In Stock</p>
+                        <Link to='/allToys'><button className='btn-web mb-2 fs-4'>View All Toys</button></Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -43,6 +46,7 @@ const Banner = () => {
                         <p>
                         $73.99 USD*· Out of stock·Brand: Welly
                         </p>
+                        <Link to='/allToys'><button className='btn-web mb-2 fs-4'>View All Toys</button></Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -56,6 +60,7 @@ const Banner = () => {
                         <p>
                         ₹378.00 INR*· In stock·Brand: Premratna
                         </p>
+                        <Link to='/allToys'><button className='btn-web mb-2 fs-4'>View All Toys</button></Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -69,6 +74,7 @@ const Banner = () => {
                         <p>
                         $11.00 USD*· In stock
                         </p>
+                        <Link to='/allToys'><button className='btn-web mb-2 fs-4'>View All Toys</button></Link>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

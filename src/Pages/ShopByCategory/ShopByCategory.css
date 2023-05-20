@@ -1,0 +1,11 @@
+.tab-divs img{
+ width: 600px;
+ height: 450px;
+ object-fit: cover;
+}
+
+.catagory-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}

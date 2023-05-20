@@ -19,6 +19,8 @@ const NavBar = () => {
     const renderTooltip = (props) => (
         <Tooltip id="button-tooltip" {...props}>
           {user.displayName}
+          <br />
+          {user.email}
         </Tooltip>
       );
 

@@ -8,7 +8,7 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
 
 
-    const url = `http://localhost:5000/addToy?email=${user?.email}`;
+    const url = `http://localhost:5000/addToy1?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

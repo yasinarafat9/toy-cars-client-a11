@@ -22,7 +22,7 @@ const ShopByCategory = () => {
 
     // const [categorys, setCategorys] = useState([]);
 
-    // const url = `http://localhost:5000/addToySubcategory?subcategory=${user?.subcategory}`;
+    // const url = `https://toy-cars-server-rust.vercel.app/addToySubcategory?subcategory=${user?.subcategory}`;
 
     // useEffect(() => {
     //     fetch(url)

@@ -24,7 +24,7 @@ const AddAToy = () => {
         // console.log(addToy)
 
         // send data to server
-        fetch('http://localhost:5000/addToy', {
+        fetch('https://toy-cars-server-rust.vercel.app/addToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

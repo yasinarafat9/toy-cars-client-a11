@@ -1,42 +1,50 @@
-
-
-.nav-bg{
+.nav-bg {
     /* background-color: wheat; */
     box-shadow: 0px 2px 5px rgba(75, 74, 74, 0.678);
     width: 1200px;
     height: 90px;
     padding: 10px;
 }
-.nav-img-name{
+
+.nav-img-name {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.nav-dives{
+
+.nav-dives {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
 }
-.nav-dives img{
+
+.nav-dives img {
     width: 140px;
 }
-.nav-dives h4{
+
+.nav-dives h4 {
     font-size: 30px;
     font-weight: bold;
     padding: 10px;
     color: white;
-    text-shadow:0px 2px 5px rgba(27, 27, 27, 0.904);
+    text-shadow: 0px 2px 5px rgba(27, 27, 27, 0.904);
 }
-.nav-words{
+
+.nav-dives h4:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.904);
+}
+
+.nav-words {
     margin: 10px 20px;
     color: rgb(43, 42, 42);
     font-weight: bold;
     text-decoration: none;
 }
 
-.btn-web{
+.btn-web {
     padding: 8px 20px;
     font-weight: bold;
     color: white;
@@ -45,20 +53,24 @@
     border: none;
     text-align: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.678);
-    
-}
-.btn-web:hover{
-    background-color: rgb(241, 82, 7);
+
 }
 
-.user-nav img{
+.btn-web:hover {
+    background-color: rgb(241, 82, 7);
+    /* box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.678); */
+    /* text-shadow: 0px 0px 5px rgb(62, 65, 255); */
+}
+
+.user-nav img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin: 0px 20px;
     box-shadow: 0px 2px 5px rgba(63, 62, 62, 0.678);
 }
-.active{
+
+.active {
     color: rgb(255, 117, 4);
     /* text-shadow: 0px 5px 5px rgba(62, 225, 253, 0.678); */
-  }
+}

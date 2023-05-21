@@ -46,34 +46,59 @@ const ShopByCategory = () => {
                     <div className='tab-divs container m-auto'>
                         <h2>Sub Category:Toy Sports Cars</h2>
                         <div className='row'>
-                            <div className='catagory-img grid col-md-2'>
-                                <img className='col' src={sportsCar1} alt="" />
-                                <img className='col' src={sportsCar2} alt="" />
-                                <img className='row' src={sportsCar3} alt="" />
-                                <img className='row' src={sportsCar5} alt="" />
+                            <div className='catagory-img container grid row mx-auto text-center'>
+                                <div className='col col-md-6'>
+                                    <img src={sportsCar1} alt="" />
+                                </div>
+                                <div className='col col-md-6'> 
+                                    <img src={sportsCar2} alt="" />
+                                </div>
+                                <div className='col col-md-6'>
+                                    <img src={sportsCar3} alt="" />
+                                </div>
+                                <div className='col col-md-6'>
+                                    <img src={sportsCar5} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </TabPanel>
+                <TabPanel>
+                    <div className='tab-divs  m-auto container '>
+                        <h2>Sub Category: Toy Trucks</h2>
+                        <div className='catagory-img container grid row mx-auto text-center'>
+                            <div className='col col-md-6' >
+                                <img src={toyCar1} alt="" />
+                            </div>
+                            <div className='col col-md-6'>
+                                <img className='col col-md-6' src={toyCar2} alt="" />
+                            </div>
+                            <div className='col col-md-6'>
+                                <img className='col col-md-6' src={toyCar3} alt="" />
+                            </div>
+                            <div className='col col-md-6'>
+                                <img className='col col-md-6' src={toyCar4} alt="" />
                             </div>
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div className='tab-divs container m-auto'>
-                        <h2>Sub Category:Toy Trucks</h2>
-                        <div className='container catagory-img grid-sm-3'>
-                            <img className='row' src={toyCar1} alt="" />
-                            <img className='row' src={toyCar2} alt="" />
-                            <img className='row' src={toyCar3} alt="" />
-                            <img className='row' src={toyCar4} alt="" />
-                        </div>
-                    </div>
-                </TabPanel>
-                <TabPanel>
-                    <div className='tab-divs container m-auto'>
                         <h2>Sub Category:Toy Fire Trucks</h2>
-                        <div className='container catagory-img grid-sm-3'>
-                            <img className='row' src={toyFireTruck1} alt="" />
-                            <img className='row' src={toyFireTruck2} alt="" />
-                            <img className='row' src={toyFireTruck3} alt="" />
-                            <img className='row' src={toyFireTruck4} alt="" />
+                        <div className=' catagory-img container grid row mx-auto text-center'>
+
+                            <div className='col col-md-6'>
+                                <img className='row' src={toyFireTruck1} alt="" />
+                            </div>
+                            <div className='col col-md-6'>
+                                <img className='row' src={toyFireTruck2} alt="" />
+                            </div>
+                            <div className='col col-md-6'>
+                                <img className='row' src={toyFireTruck3} alt="" />
+                            </div>
+                            <div className='col col-md-6'>
+                                <img className='row' src={toyFireTruck4} alt="" />
+                            </div>
                         </div>
                     </div>
                 </TabPanel>

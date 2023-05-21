@@ -78,6 +78,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
             </Tabs>
+            <br />
             <div className='text-center'>
                 <Link to='/allToys'><button className='btn-web fs-2'>View All Toys</button></Link>
             </div>

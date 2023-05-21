@@ -1,5 +1,7 @@
 .footer-bg{
     background-color: rgb(37, 36, 36);
+    border: none;
+    box-shadow: 0px 2px 5px gray ;
     /* height: 300px; */
     width: 1200px;
 }
@@ -19,7 +21,7 @@
     margin-bottom: 30px;
     font-weight: 600;
     /* color: rgb(255, 72, 0); */
-    color: rgb(241, 41, 34);
+    color: rgb(226, 123, 54);
 }
 .footer-divs p{
     /* margin: 15px; */

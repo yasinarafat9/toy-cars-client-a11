@@ -24,7 +24,7 @@ const NavBar = () => {
         </Tooltip>
       );
 
-
+////////;;;;;;;///
     return (
         <nav className='nav-bg'>
             <div className='nav-dives d-flex justify-between'>

@@ -8,8 +8,8 @@ const Footer = () => {
 
         <footer className='footer-bg'>
             <div>
-                <div className='footer-divs'>
-                    <div className='img-p'>
+                <div className='footer-divs container grid row'>
+                    <div className='img-p col col-md-4'>
                         <img src={toyCarsLogo} alt="" />
                         <h2 className='text-white'>Super Toy Cars</h2>
                         <p className='w-20 text-left my-1'>Address:</p>
@@ -22,14 +22,14 @@ const Footer = () => {
                         <FaYoutube className='icon-size' />
                     </div> */}
                     </div>
-                    <div>
+                    <div className='col col-md-4'>
                         <h6>About</h6>
                         <Link className='text-style' to=''>About</Link>
                         <Link className='text-style' to=''>Home</Link>
                         <Link className='text-style' to=''>Service</Link>
                         <Link className='text-style' to=''>Contact</Link>
                     </div>
-                    <div>
+                    <div className='col col-md-4'>
                         <h6>Company</h6>
                         <Link className='text-style' to=''>Toy makers</Link>
                         <Link className='text-style' to=''>About us</Link>
@@ -37,7 +37,7 @@ const Footer = () => {
                         <Link className='text-style' to=''>Follow Us in..</Link>
 
                     </div>
-                    <div>
+                    <div className='col col-md-4'>
                         <h6>Support</h6>
                         <Link className='text-style' to=''>Support Center</Link>
                         <Link className='text-style' to=''>Feedback</Link>
